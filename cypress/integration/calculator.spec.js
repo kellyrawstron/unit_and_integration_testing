@@ -56,9 +56,13 @@ describe("Calculator", () => {
   it('should handle large numbers', () => {
     cy.get('#number9').click();
     cy.get('#number8').click();
+    cy.get('#number9').click();
+    cy.get('#number0').click();
     cy.get('#operator-multiply').click();
     cy.get('#number9').click();
     cy.get('#number9').click();
+    cy.get('#number0').click();
+    cy.get('#number0').click();
     cy.get('#operator-equals').click();
     cy.get('.display').should('contain', '9702')
 
